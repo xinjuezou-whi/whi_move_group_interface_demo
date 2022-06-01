@@ -29,7 +29,7 @@ Changelog:
 int main(int argc, char** argv)
 {
     /// node version and copyright announcement
-    std::cout << "\nWHI MoveIt move group interface demo VERSION 00.03" << std::endl;
+    std::cout << "\nWHI MoveIt move group interface demo VERSION 00.04" << std::endl;
     std::cout << "Copyright © 2022-2023 Wheel Hub Intelligent Co.,Ltd. All rights reserved\n" << std::endl;
 
     ros::init(argc, argv, "move_group_interface_demo");
@@ -43,8 +43,8 @@ int main(int argc, char** argv)
     /// get config params
     std::string paramPlanningGroup;
     nodeHandle.param("/move_group_interface_demo/planning_group", paramPlanningGroup, std::string("whi_arm"));
-    std::string paramVisualLink;
-    nodeHandle.param("/move_group_interface_demo/visual_link", paramVisualLink, std::string("whi_link0"));
+    std::string paramVisualFrame;
+    nodeHandle.param("/move_group_interface_demo/visual_link", paramVisualFrame, std::string("whi_link0"));
     double paramTitleHeight = 0.0;
     nodeHandle.param("/move_group_interface_demo/title_height", paramTitleHeight, 0.7);
     // plan01
@@ -133,7 +133,7 @@ int main(int argc, char** argv)
     // and trajectories in rviz as well as debugging tools such as step-by-step introspection of a script
     // set the base link for visual tools
     namespace rvt = rviz_visual_tools;
-    moveit_visual_tools::MoveItVisualTools visualTools(paramVisualLink);
+    moveit_visual_tools::MoveItVisualTools visualTools(paramVisualFrame);
     visualTools.deleteAllMarkers();
 
     // remote control is an introspection tool that allows users to step through a high level script
