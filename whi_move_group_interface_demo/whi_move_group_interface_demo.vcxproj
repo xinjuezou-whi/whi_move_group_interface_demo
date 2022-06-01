@@ -90,7 +90,7 @@
     <Link>
       <AdditionalLibraryDirectories>/opt/ros/noetic/lib;/opt/ros/melodic/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LibraryDependencies>roslib;roscpp;rosconsole;rosconsole_bridge;rostime;rospack;rosconsole_log4cxx;rosconsole_backend_interface;roscpp_serialization;cpp_common;class_loader;xmlrpcpp;boost_system;actionlib;tf;tf2;tf2_ros;tf_conversions;moveit_move_group_interface;moveit_planning_interface;moveit_visual_tools;moveit_robot_state;moveit_robot_model;moveit_transforms;moveit_profiler;moveit_exceptions;moveit_planning_scene;moveit_collision_detection;moveit_robot_trajectory;moveit_planning_scene_monitor;moveit_robot_model_loader;moveit_collision_plugin_loader;moveit_ros_occupancy_map_monitor;moveit_kinematic_constraints;moveit_collision_detection_fcl;moveit_kinematics_plugin_loader;moveit_rdf_loader;moveit_utils;moveit_kinematics_base;moveit_planning_scene_interface;rviz;rviz_visual_tools_remote_control;rviz_default_plugin;rviz_visual_tools;rviz_visual_tools_gui;eigen_conversions;geometric_shapes;random_numbers;orocos-kdl;octomap;octomath;dynamic_reconfigure_config_init_mutex;resource_retriever;kdl_conversions;image_transport;interactive_markers;laser_geometry;message_filters;urdf;srdfdom;%(LibraryDependencies)</LibraryDependencies>
-      <SharedLibrarySearchPath>/opt/ros/melodic/lib;%(SharedLibrarySearchPath)</SharedLibrarySearchPath>
+      <SharedLibrarySearchPath>/opt/ros/noetic/lib;/opt/ros/melodic/lib;%(SharedLibrarySearchPath)</SharedLibrarySearchPath>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

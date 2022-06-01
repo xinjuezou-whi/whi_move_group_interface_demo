@@ -45,8 +45,8 @@ int main(int argc, char** argv)
     nodeHandle.param("/move_group_interface_demo/planning_group", paramPlanningGroup, std::string("whi_arm"));
     std::string paramVisualLink;
     nodeHandle.param("/move_group_interface_demo/visual_link", paramVisualLink, std::string("whi_link0"));
-    double titleHeight = 0.0;
-    nodeHandle.param("/move_group_interface_demo/title_height", titleHeight, 0.7);
+    double paramTitleHeight = 0.0;
+    nodeHandle.param("/move_group_interface_demo/title_height", paramTitleHeight, 0.7);
     // plan01
     std::vector<double> paramGoal01;
     nodeHandle.getParam("/move_group_interface_demo/plan01/goal_pose", paramGoal01);
@@ -142,7 +142,7 @@ int main(int argc, char** argv)
 
     // rviz provides many types of markers, in this demo we will use text, cylinders, and spheres
     Eigen::Isometry3d textPose = Eigen::Isometry3d::Identity();
-    textPose.translation().z() = titleHeight;
+    textPose.translation().z() = paramTitleHeight;
     visualTools.publishText(textPose, "MoveGroupInterface Demo", rvt::WHITE, rvt::XLARGE);
 
     // batch publishing is used to reduce the number of messages being sent to rviz for large visualizations
