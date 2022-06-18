@@ -1,0 +1,39 @@
+move_group_interface_demo:
+  planning_group: 'whi_arm'
+  visual_frame: 'whi_link0'
+  title_height: 0.7
+  plan01:
+    goal_pose: [0.2, -0.05, 0.3]
+  plan02:
+    joint_index: [0, 1, 2, 4]
+    joint_goal: [-1.0471975, -1.0471975, -1.0471975, 1.0471975]
+    velocity_scaling_factor: 0.05
+    acc_scaling_factor: 0.05
+  plan03:
+    start_pose: init
+    goal_pose: [0.2, -0.05, 0.3]
+    constraint_frame: 'whi_link0'    
+    constraint_link: 'whi_link6'
+    absolute_tolerance: [0.1, 0.1, 0.1]
+    weight: 1.0
+    planning_time: 10.0
+  plan04:
+    ik_timeout: 0.5
+    start_pose: [0.25, -0.05, 0.25]
+    pose_index_01: ['x', 'z']
+    pose_delta_01: [-0.1, 0.1]
+    pose_index_02: ['y']
+    pose_delta_02: [0.1]
+    pose_index_03: ['y', 'z']
+    pose_delta_03: [-0.1, -0.1]
+    jump_threshold: 0.0
+    end_effector_step: 0.01
+  plan05:
+    goal_pose: [0.24, 0.04, 0.26]
+    block_box_size: [0.05, 0.4, 0.1]
+    block_box_pose: [0.15, 0.0, 0.4]
+    grab_cylinder_radius: 0.02
+    grab_cylinder_height: 0.1
+    grap_cylinder_pose_index: ['x', 'z']
+    grap_cylinder_pose: [0.1, 0.02]
+    attach_link: ''

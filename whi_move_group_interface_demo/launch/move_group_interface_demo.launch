@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- arguments -->
+  <arg name="arm" default="whi"/>
+
+  <!-- params -->
+  <rosparam file="$(find whi_move_group_interface_demo)/config/config_$(arg arm).yaml" command="load"/>
+
+  <!-- demo node -->
+  <node name="whi_move_group_interface_demo" pkg="whi_move_group_interface_demo" type="whi_move_group_interface_demo_node" output="screen"/>
+</launch>
