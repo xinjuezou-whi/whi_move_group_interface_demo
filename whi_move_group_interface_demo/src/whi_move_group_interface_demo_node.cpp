@@ -29,7 +29,7 @@ Changelog:
 int main(int argc, char** argv)
 {
     /// node version and copyright announcement
-    std::cout << "\nWHI MoveIt move group interface demo VERSION 00.04" << std::endl;
+    std::cout << "\nWHI MoveIt move group interface demo VERSION 00.05" << std::endl;
     std::cout << "Copyright © 2022-2023 Wheel Hub Intelligent Co.,Ltd. All rights reserved\n" << std::endl;
 
     ros::init(argc, argv, "move_group_interface_demo");
@@ -44,7 +44,7 @@ int main(int argc, char** argv)
     std::string paramPlanningGroup;
     nodeHandle.param("/move_group_interface_demo/planning_group", paramPlanningGroup, std::string("whi_arm"));
     std::string paramVisualFrame;
-    nodeHandle.param("/move_group_interface_demo/visual_link", paramVisualFrame, std::string("whi_link0"));
+    nodeHandle.param("/move_group_interface_demo/visual_frame", paramVisualFrame, std::string("whi_link0"));
     double paramTitleHeight = 0.0;
     nodeHandle.param("/move_group_interface_demo/title_height", paramTitleHeight, 0.7);
     // plan01
